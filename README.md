@@ -21,3 +21,13 @@ While ARIMA models are reliable for **short-term forecasting**, their accuracy o
 - 📉 Model evaluation using AIC
 
 ---
+## 🚧 In Progress / Upcoming Models
+
+This project is under active development. Planned future models include:
+
+- ❄️ **Seasonal ARIMA (SARIMA)** – to capture seasonality in the data
+- 🎲 **Monte Carlo Simulation** – for probabilistic forecasting and risk estimation
+- 📉 **ARCH/GARCH Models** – for modeling volatility and heteroskedasticity
+- 🧠 **Neural Networks (e.g., LSTM)** – for capturing complex, non-linear patterns
+
+Stay tuned as these models are added and compared with ARIMA for forecasting performance.
