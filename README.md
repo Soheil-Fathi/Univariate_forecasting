@@ -18,7 +18,7 @@ While ARIMA models are reliable for **short-term forecasting**, their accuracy o
 - 🔁 Differencing when required to achieve stationarity
 - 🔍 Visualizations to understand trends and forecasts
 - 🔢 Direct and recursive multi-step ARIMA forecasting
-- 📉 Model evaluation using AIC
+- 📉 Model evaluation using AIC and BIC
 
 ---
 ## 🚧 In Progress / Upcoming Models
