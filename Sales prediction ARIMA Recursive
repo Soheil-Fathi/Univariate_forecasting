@@ -38,9 +38,9 @@ model = ARIMA(df['Sales'], order=(1, 1, 1))  # (p,d,q)
 model_fit = model.fit()
 print(model_fit.summary())
 
-# 6. Forecast next 12 months
-forecast = model_fit.forecast(steps=12)
-forecast_dates = pd.date_range(start=df.index[-1] + pd.offsets.MonthBegin(), periods=12, freq='M')
+# 6. Forecast next 2 months
+forecast = model_fit.forecast(steps=2)
+forecast_dates = pd.date_range(start=df.index[-1] + pd.offsets.MonthBegin(), periods=2, freq='M')
 forecast_df = pd.Series(forecast, index=forecast_dates)
 
 # 7. Plot actual + forecast
