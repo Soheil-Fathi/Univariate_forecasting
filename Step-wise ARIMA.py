@@ -32,6 +32,11 @@ model = ARIMA(df['Sales'], order=best_order)
 model_fit = model.fit()
 print(model_fit.summary())
 
+#  Show AIC and BIC values explicitly
+print("Selected Model Order:", stepwise_model.order)
+print("Final Model AIC:", stepwise_model.aic())
+print("Final Model BIC:", stepwise_model.bic())
+
 # Forecast next month
 forecast = model_fit.forecast(steps=1)
 forecast_dates = pd.date_range(start=df.index[-1] + pd.offsets.MonthBegin(), periods=1, freq='M')
