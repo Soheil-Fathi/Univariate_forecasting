@@ -28,6 +28,7 @@ This project is under active development. Planned future models include:
 - ❄️ **Seasonal ARIMA (SARIMA)** – to capture seasonality in the data
 - 🎲 **Monte Carlo Simulation** – for probabilistic forecasting and risk estimation
 - 📉 **ARCH/GARCH Models** – for modeling volatility and heteroskedasticity
+- 🌲 **Random Forest Regression** – for non-linear forecasting and feature-based models
 - 🧠 **Neural Networks (e.g., LSTM)** – for capturing complex, non-linear patterns
 
 Stay tuned as these models are added and compared with ARIMA for forecasting performance.
