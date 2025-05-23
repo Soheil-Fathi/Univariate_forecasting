@@ -1,4 +1,4 @@
-# 📊 Univariate Time Series Forecasting with ARIMA
+# 📊 Univariate Time Series Forecasting 
 
 This project implements different methods for forecasting future values using **univariate time series models**.
 
