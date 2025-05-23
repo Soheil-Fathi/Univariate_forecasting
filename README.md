@@ -13,7 +13,7 @@ While ARIMA models are reliable for **short-term forecasting**, their accuracy o
 
 ## 🔧 Features
 
-- 📅 Simulated monthly sales data
+- 📅 Simulated sales data
 - ✅ Augmented Dickey-Fuller (ADF) test for stationarity
 - 🔁 Differencing when required to achieve stationarity
 - 🔍 Visualizations to understand trends and forecasts
