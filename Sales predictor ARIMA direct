@@ -10,7 +10,7 @@ sales = 200 + np.random.normal(0, 10, size=100).cumsum()
 df = pd.DataFrame({'Date': date_range, 'Sales': sales}).set_index('Date')
 
 # Forecast horizon
-H = 3
+H = 2
 train = df['Sales']
 
 # Create target columns: t+1, t+2, t+3 (direct targets)
