@@ -23,10 +23,10 @@ print(f"ADF Statistic: {result[0]:.4f}")
 print(f"p-value: {result[1]:.4f}")
 #Since d>1 is not something common we check it only for 1 and 0
 if result[1] < 0.05:
-    print("✅ Series is stationary — using d = 0")
+    print(" Series is stationary — using d = 0")
     d_values = [0]
 else:
-    print("⚠️ Series is NOT stationary — using d = 1")
+    print(" Series is NOT stationary — using d = 1")
     d_values = [1]
 
 # 3. Define ARIMA(p,[0 or1},q) search grid for higher d ,d_values = range(0, x) should be added
@@ -52,22 +52,22 @@ for order in orders:
 
         if is_stationary(residuals):
             aic = model_fit.aic
-            print(f"ARIMA{order} - AIC: {aic:.2f} ✅ Residuals stationary")
+            print(f"ARIMA{order} - AIC: {aic:.2f}  Residuals stationary")
             if aic < best_aic:
                 best_aic = aic
                 best_model = model_fit
                 best_order = order
         else:
-            print(f"ARIMA{order} - ❌ Residuals NOT stationary")
+            print(f"ARIMA{order} -  Residuals NOT stationary")
     except:
         continue
 # 5. Final result and diagnostics
 if best_model:
-    print("\n✅ Best ARIMA model with stationary residuals:", best_order)
+    print("\n Best ARIMA model with stationary residuals:", best_order)
     print("AIC:", best_model.aic)
     print("BIC:", best_model.bic)
 else:
-    raise ValueError("❌ No suitable ARIMA model found with stationary residuals.")
+    raise ValueError(" No suitable ARIMA model found with stationary residuals.")
 
 # 6. Forecast next 2 months
 forecast_steps = 2
