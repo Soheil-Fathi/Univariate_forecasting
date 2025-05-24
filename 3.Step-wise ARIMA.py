@@ -18,7 +18,7 @@ df = pd.DataFrame({'Date': date_range, 'Sales': sales}).set_index('Date')
 # 2. ADF test on original series to determine d
 
 result = adfuller(df['Sales'])
-print("📉 ADF Test on Original Series:")
+print(" ADF Test on Original Series:")
 print(f"ADF Statistic: {result[0]:.4f}")
 print(f"p-value: {result[1]:.4f}")
 #Since d>1 is not something common we check it only for 1 and 0
