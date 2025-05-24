@@ -7,16 +7,13 @@ from itertools import product
 import warnings
 warnings.filterwarnings("ignore")
 
-# -----------------------------
-# 1. Generate sample data
-# -----------------------------
+#  Generate sample data
 np.random.seed(42)
 date_range = pd.date_range(start='2020-01-01', periods=100, freq='MS')
 sales = 200 + np.random.normal(0, 10, size=100).cumsum()
 df = pd.DataFrame({'Date': date_range, 'Sales': sales}).set_index('Date')
 
-# 2. ADF test on original series to determine d
-
+#  ADF test on original series to determine d
 result = adfuller(df['Sales'])
 print(" ADF Test on Original Series:")
 print(f"ADF Statistic: {result[0]:.4f}")
@@ -29,12 +26,12 @@ else:
     print(" Series is NOT stationary — using d = 1")
     d_values = [1]
 
-# 3. Define ARIMA(p,[0 or1},q) search grid for higher d ,d_values = range(0, x) should be added
+#  Define ARIMA(p,{0 or1},q) search grid for higher d ,d_values = range(0, x) should be added
 p_values = range(0, 4)
 q_values = range(0, 4)
 orders = list(product(p_values, d_values, q_values))
 
-# 4. Search for best model using ADFand AIC
+# Search for best model using ADFand AIC
 best_aic = float("inf")
 best_model = None
 best_order = None
@@ -61,7 +58,7 @@ for order in orders:
             print(f"ARIMA{order} -  Residuals NOT stationary")
     except:
         continue
-# 5. Final result and diagnostics
+#  Final result and diagnostics
 if best_model:
     print("\n Best ARIMA model with stationary residuals:", best_order)
     print("AIC:", best_model.aic)
@@ -69,13 +66,13 @@ if best_model:
 else:
     raise ValueError(" No suitable ARIMA model found with stationary residuals.")
 
-# 6. Forecast next 2 months
+#  Forecast next 2 months
 forecast_steps = 2
 forecast = best_model.forecast(steps=forecast_steps)
 forecast_index = pd.date_range(start=df.index[-1] + pd.offsets.MonthBegin(), periods=forecast_steps, freq='MS')
 forecast_series = pd.Series(forecast, index=forecast_index)
 
-# 7. Plot forecast
+#  Plot forecast
 print(f"predicted values is {forecast_series}")
 plt.figure(figsize=(10, 5))
 plt.plot(df['Sales'], label='Historical Sales')
@@ -87,7 +84,7 @@ plt.legend()
 plt.grid()
 plt.show()
 
-# 8. Plot residuals
+#  Plot residuals
 residuals = best_model.resid
 plt.figure(figsize=(12, 4))
 plt.plot(residuals)
