@@ -4,7 +4,7 @@ This project implements different methods for forecasting future values using **
 
 ---
 
-## 📈 Sales Forecasting using ARIMA
+## 📈 ARIMA
 
 The **ARIMA (AutoRegressive Integrated Moving Average)** model is used to forecast  output based on historical data. ARIMA is one of the simplest yet effective methods for analyzing and predicting time series in many practical scenarios.
 While ARIMA models are reliable for **short-term forecasting**, their accuracy often declines over longer horizons. Therefore, they are best suited for cases where **near-future predictions** are the goal.
