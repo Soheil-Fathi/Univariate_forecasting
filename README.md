@@ -21,7 +21,7 @@ While ARIMA models are reliable for **short-term forecasting**, their accuracy o
 - 📉 Model evaluation using AIC and BIC
 
 ---
-# ❄️  SARIMA
+## ❄️  SARIMA
 in many real-world cases, a time series is influenced not only by its past values but also by specific times or seasons. For example, consider the sales of winter clothing—it's natural to expect an increase in sales as winter approaches. This kind of pattern reflects seasonality, which standard ARIMA models (ARIMA(p,d,q)) don’t capture on their own.
 To handle this, Seasonal ARIMA models—often written as ARIMA(p,d,q)(P,D,Q)[s]—include additional components to account for seasonal behavior:
 P: Number of seasonal autoregressive (AR) terms
@@ -34,7 +34,6 @@ These seasonal parameters help the model better capture patterns that repeat ove
 
 This project is under active development. Planned future models include:
 
-- ❄️ **Seasonal ARIMA (SARIMA)** – to capture seasonality in the data
 - 🎲 **Monte Carlo Simulation** – for probabilistic forecasting and risk estimation
 - 📉 **ARCH/GARCH Models** – for modeling volatility and heteroskedasticity
 - 🌲 **Random Forest Regression** – for non-linear forecasting and feature-based models
