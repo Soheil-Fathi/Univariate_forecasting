@@ -35,7 +35,9 @@ D: Number of seasonal differences
 Q: Number of seasonal moving average (MA) terms
 
 s: The number of time steps in a season (e.g., 12 for monthly data with yearly seasonality)
+
 These seasonal parameters help the model better capture patterns that repeat over fixed periods, improving forecast accuracy in data with strong seasonal effects.
+
 ---
 ## 🚧 In Progress / Upcoming Models
 
